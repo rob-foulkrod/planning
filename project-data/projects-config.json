@@ -1,0 +1,26 @@
+{
+  "availableProjects": [
+    {
+      "projectName": "ProjectColdBrew",
+      "displayName": "Cold Brew Recipe Calculator",
+      "dataFile": "cold-brew-project.json"
+    },
+    {
+      "projectName": "ECommercePortal",
+      "displayName": "Student E-Commerce Learning Portal",
+      "dataFile": "ecommerce-project.json"
+    },
+    {
+      "projectName": "CloudKitchen",
+      "displayName": "CloudKitchen Food Delivery Platform",
+      "dataFile": "cloudkitchen-project.json"
+    }
+  ],
+  "settings": {
+    "workItemTypes": {
+      "feature": "Feature",
+      "pbi": "Product Backlog Item", 
+      "task": "Task"
+    }
+  }
+}

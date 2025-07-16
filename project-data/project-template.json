@@ -1,0 +1,112 @@
+{
+  "_aiGenerationGuidance": {
+    "purpose": "Template for generating Azure DevOps work item data files",
+    "instructions": "Replace ALL {{TOKEN}} placeholders with appropriate values. Maintain JSON structure. Generate realistic, professional content.",
+    
+    "tokenRules": {
+      "PROJECT_NAME": "CamelCase, no spaces (e.g., 'StudentPortal', 'InventoryApp')",
+      "FULL_PROJECT_NAME": "Human-readable with spaces (e.g., 'Student Learning Portal')",
+      "PROJECT_DESCRIPTION": "1-2 sentences describing the application's purpose and key features",
+      "EFFORT_FIBONACCI": "Use only: 1, 2, 3, 5, 8, 13, 21, 34. Most PBIs should be 5-21",
+      "BUSINESS_VALUE_1_TO_5": "1=Optional, 2=Low, 3=Medium, 4=High, 5=Critical/MVP",
+      "REMAINING_WORK_HOURS": "2-8 hours. Simple=2-3, Medium=4-6, Complex=7-8 (max 1 day)",
+      "PHASE_NAME": "Descriptive phase names (e.g., 'Project Setup', 'Core Development', 'Testing & Launch')",
+      "TIMEFRAME": "Use format: 'Week X' or 'Weeks X-Y'",
+      "FEATURE_TITLE": "Noun phrases describing functional areas (e.g., 'User Authentication', 'Payment Processing')",
+      "PBI_TITLE": "Action-oriented titles starting with verbs (e.g., 'Implement', 'Create', 'Configure')",
+      "TASK_TITLE": "Specific, actionable tasks (e.g., 'Set up database schema', 'Design login form')"
+    },
+    
+    "structureGuidelines": {
+      "phases": "3-5 phases typical. Phase 0=Setup, Final=Testing/Launch",
+      "featuresPerPhase": "1-3 features per phase",
+      "pbisPerFeature": "2-4 PBIs per feature", 
+      "tasksPerPBI": "3-6 tasks per PBI",
+      "totalProject": "8-16 weeks duration, 40-80 tasks total",
+      "namingConventions": "Use consistent domain terminology. Avoid abbreviations in titles.",
+      "idPatterns": "phase0, phase1... | feature0_1, feature1_1... | pbi0_1, pbi1_1..."
+    },
+    
+    "contentPatterns": {
+      "phaseProgression": "Setup → Core Features → Advanced Features → Testing/Polish → Launch",
+      "pbiTypes": "Foundation (effort 5-8), Standard Features (13), Complex Features (21)",
+      "taskCategories": "Research, Design, Implementation, Testing, Configuration, Documentation",
+      "businessValuePriority": "MVP features=5, Core features=4, Enhancements=3, Nice-to-have=2-1"
+    },
+    
+    "estimationGuidelines": {
+      "sprintConstraints": {
+        "tasks": "Max 8 hours (1 day). Break down larger work into multiple tasks.",
+        "pbis": "Completable within 2 weeks (1 sprint). Effort 13-21 max for most teams.",
+        "features": "May span multiple sprints. Group related PBIs logically."
+      },
+      "effortDistribution": "Effort 5-8: Foundation/Setup, 13: Standard features, 21: Complex features",
+      "businessValueLogic": "Core functionality=5, Important features=4, Enhancements=3, Nice-to-have=2",
+      "hourEstimation": "Research=4-8h, UI=6-8h, Backend=4-8h, Testing=6-8h, Config=2-4h",
+      "realisticTotals": "Total hours should be 200-600. Average 5-6 hours per task."
+    },
+    
+    "domainExamples": {
+      "webApps": "Authentication, Dashboard, API Integration, User Management",
+      "ecommerce": "Product Catalog, Shopping Cart, Payment Processing, Order Management",
+      "education": "Course Management, Student Portal, Assignment System, Grading",
+      "business": "CRM, Reporting, Workflow, Data Management"
+    },
+    
+    "qualityStandards": {
+      "descriptions": "Be specific and actionable. Include technologies and methods",
+      "titles": "Clear, professional, avoid jargon",
+      "consistency": "Use same domain terminology throughout project",
+      "completeness": "Every token must be replaced. No placeholders in final output.",
+      "realism": "Use actual technology names, realistic features, practical timelines"
+    },
+    
+    "validationChecklist": [
+      "All {{TOKEN}} placeholders replaced",
+      "Fibonacci sequence used for effort values",
+      "Business value 1-5 scale maintained", 
+      "Task hours are realistic (2-8, max 1 day)",
+      "PBI effort allows completion within 1 sprint (typically ≤21)",
+      "ID patterns follow convention",
+      "Descriptions are specific and actionable",
+      "Project total hours are reasonable (200-600)",
+      "Business value aligns with feature importance"
+    ]
+  },
+  "projectMetadata": {
+    "name": "{{PROJECT_NAME}}",
+    "fullName": "{{FULL_PROJECT_NAME}}",
+    "description": "{{PROJECT_DESCRIPTION}}"
+  },
+  "phases": [
+    {
+      "id": "phase0",
+      "name": "{{PHASE_0_NAME}}",
+      "description": "{{PHASE_0_DESCRIPTION}}",
+      "timeframe": "{{PHASE_0_TIMEFRAME}}",
+      "features": [
+        {
+          "id": "feature0_1",
+          "title": "{{FEATURE_0_1_TITLE}}",
+          "description": "{{FEATURE_0_1_DESCRIPTION}}",
+          "pbis": [
+            {
+              "id": "pbi0_1",
+              "title": "{{PBI_0_1_TITLE}}",
+              "description": "{{PBI_0_1_DESCRIPTION}}",
+              "effort": "{{EFFORT_FIBONACCI}}",
+              "businessValue": "{{BUSINESS_VALUE_1_TO_5}}",
+              "tasks": [
+                {
+                  "title": "{{TASK_TITLE}}",
+                  "description": "{{TASK_DESCRIPTION}}",
+                  "remainingWork": "{{REMAINING_WORK_HOURS}}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
